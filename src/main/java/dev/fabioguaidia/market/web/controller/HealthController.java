@@ -1,4 +1,4 @@
-package dev.fabioguaidia.market.health;
+package dev.fabioguaidia.market.web.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
