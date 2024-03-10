@@ -3,7 +3,10 @@ package dev.fabioguaidia.market.persistence.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.util.List;
 
 @Entity
 @Table(name = "customers")
@@ -22,6 +25,9 @@ public class Customer {
     private String address;
 
     private String email;
+
+    @OneToMany(mappedBy = "customer")
+    private List<Purchase> purchases;
 
     public String getId() {
         return id;
